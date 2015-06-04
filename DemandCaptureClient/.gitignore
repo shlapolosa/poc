@@ -15,4 +15,5 @@ distri/
 build/
 TEST*.xml
 atlassian*.xml
-ui/src/bower_components
+ui/src/main/bower_components
+ui/node_modules
