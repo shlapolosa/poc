@@ -17,3 +17,6 @@ TEST*.xml
 atlassian*.xml
 ui/src/main/bower_components
 ui/node_modules
+../.idea
+../../DemandCapture/node_modules
+../poc.iml
