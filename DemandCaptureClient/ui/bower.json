@@ -1,0 +1,21 @@
+{
+  "name": "ibrefresh",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "2.0.3",
+    "jquery.scrollTo": "1.4.14",
+    "jquery-color": "~2.1.2",
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "html5-boilerplate": "~4.3.0",
+    "socket.io": "~0.9.15",
+    "d3": "~3.5.5",
+    "c3": "~0.4.10"
+  }
+}

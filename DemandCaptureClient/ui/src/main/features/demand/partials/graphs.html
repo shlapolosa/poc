@@ -1,0 +1,54 @@
+<div class="col-lg-6">
+    <div class="container">
+        <div class="well">
+            <ul ng-repeat="demand in data">
+                <li>
+                    {{demand}}
+                </li>
+            </ul>
+
+            <c3chart bindto-id="chart1">
+                <chart-column column-id="data-1"
+                              column-values="30,200,100,400,150,250"
+                              column-type="line"/>
+            </c3chart>
+
+
+            <c3chart bindto-id="chart" chart-data="datapoints" chart-columns="datacolumns" chart-x="datax">
+                <chart-axis>
+                    <chart-axis-x axis-id="x" axis-type="timeseries">
+                        <chart-axis-x-tick tick-format="'%Y-%m-%dT%H:%M:%S'"/>
+                    </chart-axis-x>
+                </chart-axis>
+            </c3chart>
+
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class="col-lg-6">
+
+
+                <div id="chart"></div>
+
+                <c3chart bindto-id="chart1">
+                    <chart-column column-id="data-1"
+                                  column-values="30,200,100,400,150,250"
+                                  column-type="line"/>
+                </c3chart>
+
+
+                <c3chart bindto-id="chart" chart-data="datapoints" chart-columns="datacolumns" chart-x="datax">
+                    <chart-axis>
+                        <chart-axis-x axis-id="x" axis-type="timeseries">
+                            <chart-axis-x-tick tick-format="'%Y-%m-%dT%H:%M:%S'"/>
+                        </chart-axis-x>
+                    </chart-axis>
+                </c3chart>
+
+            </div>
+        </div>
+    </div>
+
+</div>

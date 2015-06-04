@@ -1,0 +1,77 @@
+{
+    "curly": true,    // true: Require {} for every new block or scope
+    "eqeqeq": true,   // true: Require triple equals (===) for comparison
+    "immed": true,    // true: Require immediate invocations to be wrapped in parens e.g. `(function () { } ());`
+    "latedef": true,  // true: Require variables/functions to be defined before being used
+    "newcap": true,   // true: Require capitalization of all constructor functions e.g. `new F()`
+    "noarg": true,    // true: Prohibit use of `arguments.caller` and `arguments.callee`
+    "sub": true,      // true: Tolerate using `[]` notation when it can still be expressed in dot notation
+    "undef": true,    // true: Require all non-global variables to be declared (prevents global leaks)
+    "boss": true,     // true: Tolerate assignments where comparisons would be expected
+    "eqnull": true,   // true: Tolerate use of `== null`
+    "node": true,      // Node.js
+    "supernew": true,
+    "newcap": false,
+
+    //TESTING GLOBALS
+    "globals": {
+        "describe": true,
+        "ddescribe": true,
+        "xdescribe": true,
+        "beforeEach": false,
+        "inject": false,
+        "jasmine": false,
+        "it": false,
+        "iit": false,
+        "xit": false,
+        "expect": false,
+        "angular": false,
+        "_": false,
+        "$": false,
+        "spyOn": false,
+        "moment": false,
+        "feature": false,
+        "afterEach": false,
+        "directive": false,
+        "browser": false,
+        "loadFile": false,
+        "by": false,
+        "element": false,
+        "protractor": false,
+        "repeater" : false,
+        "feature" : true,
+        "window" : true,
+        "using" : true,
+        "checkService" : false,
+        "chance": true,
+        "lithiumSsoFeature" : true,
+        "newRegisterCustomerFeature": true,
+        "s": true,
+        "s_gi": true,
+        "s_account": true,
+        "menuItems": true,
+        "ca": true,
+        "sinon": true
+    },
+
+    // Custom globals.
+
+    "predef": [
+        "define",
+        "require",
+        "Blob",
+        "Base64Binary",
+        "saveAs",
+        "Dashboard",
+        "Customer",
+        "Address",
+        "PaymentDetail",
+        "navigator",
+        "document",
+        "Placeholders",
+        "pdfMake",
+        "IncomeAndExpenseValidation",
+        "AddressValidation",
+        "EmploymentValidation"
+    ]
+}

@@ -1,0 +1,40 @@
+<div class="col-lg-6">
+    <div class="container">
+        <div class="well">
+
+            <form role="form">
+                <h3>Customer Details</h3>
+                <div class="form-group">
+                    <label class="sr-only" for="customerName">Name</label>
+                    <input type="text" class="form-control" id="customerName" placeholder="customerName" ng-model="customer.name">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="customerSurname">Surname</label>
+                    <input type="text" class="form-control" id="customerSurname" placeholder="customerSurname" ng-model="customer.surname">
+                </div>
+
+                <div class="form-group">
+                    <label for="demand">Demand</label>
+                    <input type="text" class="form-control" id="demand" ng-model="demand.description">
+                </div>
+                <div class="form-group">
+                    <label for="demandType">Demand Type</label>
+                    <select class="form-control" id="demandType" ng-model="demand.type">
+                        <option value="EAPLimitIncrease">EAPLimitIncrease</option>
+                        <option value="AccountOpening">AccountOpening</option>
+                        <option value="AccountClosing">AccountClosing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="radio-inline"><input type="radio" name="valueOrFailure" ng-model="demand.valueOrFailure" value="Value">Value</label>
+                    <label class="radio-inline"><input type="radio" name="valueOrFailure" ng-model="demand.valueOrFailure" value="Failure">Failure</label>
+
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="submit(customer,demand)">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

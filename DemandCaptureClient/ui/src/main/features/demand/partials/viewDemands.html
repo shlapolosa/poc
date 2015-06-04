@@ -1,0 +1,13 @@
+<div class="col-lg-6">
+    <div class="container">
+        <div class="well">
+
+            <div class="" ng-repeat="demand in demands">
+                <ul class="list-group">
+                    <li class="list-group-item">{{demand.customer.name}} ==== {{demand.date}}</li>
+                </ul>
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="getDemands()">Refresh</button>
+        </div>
+    </div>
+</div>

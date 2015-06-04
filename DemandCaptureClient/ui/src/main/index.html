@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="demand" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="demand" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="demand" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="demand" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="bower_components/c3/c3.min.css" rel="stylesheet" type="text/css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<ul class="menu">
+  <li><a href="#/demand/add">Add Demand</a></li>
+  <li><a href="#/demand/view">View Demands</a></li>
+  <li><a href="#/demand/graph">Graphs</a></li>
+</ul>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-view></div>
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/c3/c3.js"></script>
+
+<!-- Load c3.css -->
+<link href="bower_components/angular-c3/dist/c3.css" rel="stylesheet" type="text/css">
+
+<!-- Load d3.js and c3.js -->
+<script src="bower_components/angular-c3/dist/d3.js" charset="utf-8"></script>
+<script src="bower_components/angular-c3/dist/c3.js"></script>
+
+<!--<script src="bower_components/c3-angular/c3-angular.min.js"></script>-->
+
+<script src="js/jquery.js"></script>
+<script src="js/socket.io.js"></script>
+<script src="js/ngSocket.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="features/demand/demand.js"></script>
+<script src="features/demand/controller/demand.js"></script>
+<script src="features/demand/services/demand.js"></script>
+<script src="features/demand/controller/graphs.js"></script>
+</body>
+</html>
