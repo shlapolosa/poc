@@ -16,6 +16,7 @@
     "html5-boilerplate": "~4.3.0",
     "socket.io": "~0.9.15",
     "c3": "~0.4.10",
-    "c3-angular": "~0.4.0"
+    "c3-angular": "~0.4.0",
+    "lodash": "~3.9.3"
   }
 }

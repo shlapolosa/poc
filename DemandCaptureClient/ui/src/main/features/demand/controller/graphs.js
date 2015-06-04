@@ -9,10 +9,27 @@
         });
     }]);
 
-    app.controller('GraphController', function ($log, $scope, $socket) {
+    app.controller('GraphController', function ($log, $scope, $socket, DemandService) {
 
         $scope.data = [];
         $scope.datapoints = [];
+
+        function createGraphPoint(demand) {
+            var date = new Date(demand.date);
+            var v = demand.valueOrFailure;
+            var t = demand.type;
+            $scope.datapoints.push({
+                "x": date, "top-1": Math.floor((Math.random() * 200) + 1)
+                , "top-2": Math.floor((Math.random() * 100) + 1)
+            });
+        }
+
+        DemandService.getDemands().then(function (response) {
+            _.map(response.data, function (demand) {
+                createGraphPoint(demand);
+            });
+        });
+
         $scope.datacolumns = [{"id": "top-1", "type": "line", "name": "Top one", "color": "black"},
             {"id": "top-2", "type": "spline", "name": "Top two"}];
 
@@ -21,16 +38,9 @@
 
         $socket.on('demand', function (data) {
 
-            if(!data.message){
-                var event = data;
-                var date = new Date(event.date);
-                var v = event.demand.valueOrFailure;
-                var t = event.demand.type;
-                $scope.datapoints.push({
-                    "x": date, "top-1": Math.floor((Math.random() * 200) + 1)
-                    , "top-2": Math.floor((Math.random() * 100) + 1)
-                });
-            }else{
+            if (!data.message) {
+                createGraphPoint(data);
+            } else {
                 $scope.data.push(data.message);
             }
         });
@@ -41,4 +51,4 @@
         $scope.datax = {"id": "x"};
 
     });
-})(angular.module('demand.graph.controller', ['ngRoute', 'ngSocket', 'gridshore.c3js.chart']));
+})(angular.module('demand.graph.controller', ['ngRoute', 'ngSocket', 'gridshore.c3js.chart', 'demand.add.service']));
