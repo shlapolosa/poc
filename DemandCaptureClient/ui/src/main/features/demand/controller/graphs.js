@@ -13,15 +13,38 @@
 
         $scope.data = [];
         $scope.datapoints = [];
+        $scope.datapoints1 = [];
+
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        var value = 0;
+        var failure = 0;
 
         function createGraphPoint(demand) {
             var date = new Date(demand.date);
-            var v = demand.valueOrFailure;
+            var v = (demand.demand) ? demand.demand.valueOrFailure : demand["VALUE/ FAILURE/ FAILURE US"];
             var t = demand.type;
+            if(v == 'Value' || v == 'value'){
+                value = value+1;
+            }else{
+                failure = failure+1;
+            }
             $scope.datapoints.push({
-                "x": date, "top-1": Math.floor((Math.random() * 200) + 1)
-                , "top-2": Math.floor((Math.random() * 100) + 1)
+                "x": date, "value": value
+                , "failure": failure
             });
+
+            //$scope.datapoints1.push({
+            //    "x": weekday[Math.floor((Math.random() * 6) + 1)], "value": value+=1
+            //    , "failure": failure+=1
+            //});
         }
 
         DemandService.getDemands().then(function (response) {
@@ -30,8 +53,8 @@
             });
         });
 
-        $scope.datacolumns = [{"id": "top-1", "type": "line", "name": "Top one", "color": "black"},
-            {"id": "top-2", "type": "spline", "name": "Top two"}];
+        $scope.datacolumns = [{"id": "value", "type": "line", "name": "Value Demand", "color": "red"},
+            {"id": "failure", "type": "spline", "name": "Failure Demand", "color": "blue"}];
 
         $scope.datax = {"id": "x"};
 
@@ -46,9 +69,9 @@
         });
 
 
-        $scope.datacolumns = [{"id": "top-1", "type": "line", "name": "Top one", "color": "black"},
-            {"id": "top-2", "type": "spline", "name": "Top two"}];
-        $scope.datax = {"id": "x"};
+        //$scope.datacolumns = [{"id": "top-1", "type": "line", "name": "Top one", "color": "black"},
+        //    {"id": "top-2", "type": "spline", "name": "Top two"}];
+        //$scope.datax = {"id": "x"};
 
     });
 })(angular.module('demand.graph.controller', ['ngRoute', 'ngSocket', 'gridshore.c3js.chart', 'demand.add.service']));

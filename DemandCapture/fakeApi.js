@@ -24,6 +24,7 @@ var stringify = function (doc) {
 
 
 Demand.changes().then(function (feed) {
+
     feed.each(function (error, doc) {
         server.io.emit("demand", doc);
     });

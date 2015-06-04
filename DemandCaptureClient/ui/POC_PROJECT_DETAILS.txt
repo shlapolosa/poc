@@ -1,69 +1,111 @@
+Internet Access:
 
-those in the work, change an improve
-check plan do
-system holistically (process, policies and procedures)
-work out a process (using imperial data) of what matters, perfect it then automate it.
-
-demand is broken into Type and frequency
-value demand and demand failure
-
-flow is determined by whether we need physical contact or not, no contact no flow
-
-the point is that as a business, instead of saying we need to sell this product to our customers to make money, you say that our customers are saying they need this, and this will then make you the money!!!!!
-
-don’t make  comparisons, similar but the DSL is important
-
-how can we change
-why are we here
-challenge individually/how much change
-
-help business make technical decisions and help interpret the data
-business makes sure we are solving the right problem, we look at what is the best solution
+sbicza01\c721835
+Standard1
+proxy server : websenseproxy.standardbank.co.za on port 8080
+autoProxyConfig:	http://browserscript.standardbank.co.za/pac/default.pac
 
 
-do we know enough about our processes to be effective
-skill sets for understanding the business problem
+Person:
 
-understanding - vanguard method with tw feeding into the decisions regarding whats big IT and small it e.g.. implementing 
+	Nobesuthu Ndlovu
+	A151624
+	0829002624
 
-we are there to provide to the customer what is possible cause once they know it will help them think better of the problems.
+requirements
 
-===========================================================================================================================================================================
+	-	help the team with making their jobs easier
+
+		-	already have a template for a form, (but it might need to be a dynamic form as there 			are multiple POC’s each with their own requirements)
+		-	there seems to be a portal that we can use to host the application
+		-	need to find out where the code will be hosted and where the application will be 			hosted
+		-	there seems to be a need for POC’s to communicate or at least a discussion around 			that, also need to go through spreadsheet and see whats mandatory and whats 			optional		
+		-	the systems seems to have these major epics; capture, admin( add types, people, 			demands etc), analysis(reports and graphs)
+		-	need to think around pre-pupulation of customer details etc
+		-	ability to import current data, from excel
+		-	very slow since spread sheet is a shared resource
+		-	everyone has a spread sheet on a shared folder that they fill out and consolidate on a 			master spread sheet
+		-	there’s a vanguard charting tool that only accepts excel or access database
+
+		-	there also a need to not only look at demands, but also look at improvements i.e 			some data analysis, need to question what this analysis entails
+		-	what is a card note?
+
+		-	capability chart: collate the data sheet
+		- 	avaya CMS; telephony team some sort of alert ()
+			-	can create beep on the headphones, but only when consultant is available
+			-	find out how to access remote servers
+			- 	Martha Mafisa (083)6127794/0102494005/0112993167			-	they can setup a button on the fone that lets you onow there are calls on hold
+			- 	i can look at api
+
+			extension, loginId , name , surname
+
+		-	a couple of technologies might be useful, firstly look at nosql db since we don’t want 
+			to be tied by schema
+		-	look at C3.js with angular for rendering our graphs 
+		-	look at eon for redering realtime data with graphs; 
+			http://www.pubnub.com/blog/building-realtime-live-updating-animated-graphs-c3-js/
+		-	rethinkdb gives ability to stream data and is also a nosqldb
+		-	need some sort of scheduling where we can have visibility of who is doing what.
+		-	need a chart to show changes that then relate to trend
+
+0836097285
+	-	come up with suggestions customer demands, to make their life easier
+
+		- automate beneficiary capture
+
+	-	keep in mind interaction between Vangaurd and TW
+
+admin
+
+	-	work hours; generally from 8 to 6 there’s 2 shifts, from 8 then from 9:30 but happy if we put 		in our 8 hours a day
+	-	team meetings at 3
+	-	there’s a concept of a chairman who coordinates shifts and calls as in who is available to 		to take calls
 
 
-Ford - mass production is the production of more than you can sell - this was bad cause it lowers quality
-Toyota - just in time
+extant of listening;
 
-what is the role of management in the vanguard system?
-
-the nominal value is what matters, making things more and more alike
-
-standardisation is bad, one size does not fit all!
-
-Bohica - Bend over here it comes again
-
-its important to understand the what and why
-
-purpose -> measure ->  method
+		customers demand: 
+		what was the customer trying to solve for now and future
+		was it value or failure
+		what prevented us from doing it perfectly
+		what mattered to the customer in how we solved it
+		how was the consultant understanding and delivery 
 
 
-=============================== thursday 14 May morning session, call centre notes ================================================
+requirements for the forms;
 
-Card devision - credit and cheque
-
-Jane , debit order went off cheque card, wanted to cancel account, she was put through to general banking. Value
-
-Joan, opened a debit card which was still not active she wanted to check if it was active, referred to gb since consultant did not deal with debits. Value - Demand information on card
-
-Mr Roberson blocked his card yesterday then wanted to check his transections as well as replace blocked card, he made a transaction on a fraudulent website hence blocked the card, he wanted to stop the transaction he had made. she could not help cause transaction was already approved. He was not convinced that filling out forms will help, did not trust the process.he was sent forms and asked to email them to fraud, then she applied for a new card for him. She had to ask which code to use to stop the card and which screen to go to on cps, then she struggled to find his branch on a spread sheet, while the customer was on hold. Value - demanded a statement and a reversal
-
-Bevirly Has been asking over and over for her statements to be emailed to her but she's not getting them, she asked her to hold then sent them to her manually, her statements were blocked but it was never picked up, she unblocked them, sent them. Then   She wanted to check if it included all her transactions, she was happy. Fail - we did not pick up that her statements were blocked
-
-Mr matchabi paid off and closed a gold card, but was still receiving statements and wanted to open another account, he was not using it for more than 6 months so it was not dormant no more, he was sent to branch for reinstatement. Value - demanded a new account
-
-Sphiwo Ordered a replacement card which he had not received yet and wanted to know what was going on as he wanted his card to go to a certain branch but it was delivered to another branch, he had received an sms, she made him wait while she ordered him a new one, the problem was that the branch was captured incorrectly cause the customer gave the street adress not the branch name and the spelling of quagga was unclear, it could have been kwa He was told it be there in seven wo. Fail- we could have gotten it right the first time
+access to repository
+access to hosting environment, 
+details of hosting environment,
 
 
+Business Perfomance solutions
+	- John Gaydon
+	- they currently don’t have capacity (both interms of server space and resources, the dev is in 	  cape town and unless they do everything, they aren’t too keen) and we’ve asked them to hold 	  on.
+	- also not keen on working on their tech stack as it might not be able to solve our issues as they 	  come up
+	- developer is in cape town
+
+======================================================================================
+Home Loans
+
+ability to create the form, apply all the automatic conditions, then give the guys opportunity to apply all the manual conditions some how
+
+http://intranet.sbic.co.za/Templates/Forms_site/Business_Units/HomeLoans/HomeLoans.html
+ 
+Felicity Convey is the contact person in IT production
+
+=================================================
+to get import working 
+
+>  sudo easy_install pip
+> sudo pip install rethinkdb
+
+from windows, export the spread sheet as csv file 
+in mac open it and save it as utf-8 encoding
+then run;
+> rethinkdb import -f data3.csv --format csv --table Demands.demand --force
+
+P.S when importing, you have to change fields "Date" to "date" in the header of the import, else socket io complains
 
 
 
