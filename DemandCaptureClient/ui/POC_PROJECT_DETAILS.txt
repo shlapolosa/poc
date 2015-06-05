@@ -107,6 +107,11 @@ then run;
 
 P.S when importing, you have to change fields "Date" to "date" in the header of the import, else socket io complains
 
+to export
+
+rethinkdb export -c localhost:28015 -e Demands.Demand --format csv --fields date,Name,Customer_Details,test
+
+
 
 
 
