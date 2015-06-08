@@ -35,7 +35,9 @@
     "templatizer": "^1.0.0",
     "thinky": "^2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "flightplan": "^0.6.3"
+  },
   "jshintConfig": {
     "asi": false,
     "browser": true,

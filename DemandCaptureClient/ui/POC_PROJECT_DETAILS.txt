@@ -112,6 +112,90 @@ to export
 rethinkdb export -c localhost:28015 -e Demands.Demand --format csv --fields date,Name,Customer_Details,test
 
 
+capchart vs winchart look at vanguarud website
+
+===========================================node server setup====================================
+
+create deployment user
+sudo useradd --create-home -s /bin/bash deploy
+sudo adduser deploy sudo
+sudo passwd deploy
+log out, then ssh again as deploy ssh -p 3022 deploy@127.0.0.1
+
+mkdir .ssh
+exit
+scp -P 3022 ~/.ssh/id_rsa.pub deploy@127.0.0.1:~/.ssh/authorized_keys
+now user doesnt need password to log in
+
+
+install latest version of node by running on ubuntu 14.04
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+nvm ls-remote
+nvm install v0.12.1
+
+install forever
+
+sudo npm install bower
+
+
+source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
+mkdir Rethikdb
+
+//netword nat then go to port forwarding and do
+Host port 3022, guest port 22, name ssh, other left blank.
+ (on vm) sudo apt-get install openssh-server
+ssh -p 3022 osboxes@127.0.0.1
+
+
+
+install flight plan for auto deployment inside the project not on vm
+
+npm install -g flightplan
+npm install --save-dev flightplan (in project folder)
+Make sure ssh-agent is running (typically /usr/bin/ssh-agent).
+Then add your private key:
+ssh-add -K ~/.ssh/id_rsa
+
+
+create poc.conf and put in on vm /etc/init/poc.conf
+start poc
+stop poc
+
+give deploy user ability to run command as root on vm
+
+echo "deploy ALL=(root) NOPASSWD:/sbin/restart poc" >> /etc/sudoers
+visudo
+
+remove last two lines of flight plan file
+and add remote.exec('sudo restart poc')
+
+changed osboxes password to root
+The solution is same for all Linux distributions
+1. Start virtual machine and suddenly you will see the GRUB (Tip: if you don’t see GRUB then press SHIFT key when virtual machine starts, if you miss then you need to try again).
+2. Select recovery entry from GRUB.
+3. Now you will see recovery menu, select root (Drop to root shell prompt) option.
+4. Type this command mount -rw -o remount / and press enter.
+5. Now type passwd osboxes and press enter.
+6. Enter new password twice and enter exit to reboot.
+
+===========Project Genesis================
+
+ccc vs prestige and private when it comes to skills when setting up the avaya displays
+
+how do we run the application in prod?
+
+looking at digitalocean/horoku as a hosting environment
+have security group or virtual network functionality from your hosting provider i.e (Amazon Web Services Virtual Private Cloud, security groups)
+
+looking at nginx as a static web server and reverse proxy
+
+traffic on the networks should be limited to 100kb per message and a response time of 10s max.
+
+
+
 
 
 

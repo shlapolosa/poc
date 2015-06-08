@@ -41,6 +41,9 @@
                 , "failure": failure
             });
 
+
+            $scope.enableZoom === "true";
+
             //$scope.datapoints1.push({
             //    "x": weekday[Math.floor((Math.random() * 6) + 1)], "value": value+=1
             //    , "failure": failure+=1
